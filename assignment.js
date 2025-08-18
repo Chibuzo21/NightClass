@@ -43,3 +43,4 @@ let favoriteNum = prompt("Enter your favorite number")
     }
     }
       }
+      
