@@ -55,3 +55,41 @@ Extractednumbers = numbers.splice(1, 3);
 const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
 console.log(letters.slice(2, 6));
 console.log(letters);
+
+// ADVANCED ARRAY METHODS
+// forEach
+// it takes a callback function as its parameter
+const Digits = [1, 2, 3, 4, 5, 6];
+Digits.forEach((num) => console.log(num * 3));
+
+const Properties = ["phone", "money", "cars"];
+Properties.forEach((property) => console.log(`I have ${property}`));
+
+// map - creates a new array by appling a function to each item in an array
+const subjects = ["maths", "english", "chemistry"];
+const newSubjects = subjects.map((course) => `${course} is a subject`);
+console.log(newSubjects);
+
+// filter - returns a new array with only items that pass a certain condition
+const scores = [20, 3, 10, 80, 5, 7];
+const evenScores = scores.filter((score) => score % 2 === 0);
+console.log(evenScores);
+
+const FirstAlphabet = ["apple", "accra", "ant", "chalk"];
+const aword = FirstAlphabet.filter((letterA) => letterA.startsWith("a"));
+console.log(aword);
+// sort - helps to arrange items in an array in ascending or descending order
+const books = ["Novel", "Dictionary", "Encyclopedia", "Bible"];
+books.sort();
+console.log(books);
+
+// ascending order
+const digitals = [8, 10, 2, 1, 0, 4, 12];
+digitals.sort((a, b) => a - b);
+console.log(digitals);
+
+// descending order
+digitals.sort((a, b) => b - a);
+console.log(digitals);
+
+// leaarn more about reduce, find
