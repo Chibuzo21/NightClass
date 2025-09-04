@@ -42,3 +42,35 @@ const AllP = document.querySelectorAll("p");
 console.log(AllP[2].innerText);
 
 AllP.forEach((p) => console.log(`Hello Chairman, ${p.textContent}`));
+
+// Creating Elements
+const FirstSection = document.querySelector("#section1");
+const NewDiv = document.createElement("div");
+NewDiv.innerHTML = `<h2> This is a new Div</h2>`;
+const secondDiv = document.createElement("div");
+secondDiv.innerHTML = "<p>This is a new paragraph</p>";
+
+// Inserting Elements
+FirstSection.append(NewDiv, secondDiv);
+// append and appendChild are used to insert elements at the last position. append can take multiple elements while appendChild can only take one element.
+// append can also take strings while appendChild cannot
+
+// prepend can be used to insert elements at the beginning of a parent element
+const P4 = document.createElement("p");
+P4.append("This is the latest p tag");
+FirstSection.prepend(P4);
+
+// Removing Elements - (remove and removeChild)
+const FirstDiv = document.querySelector("#div1");
+//  FirstDiv.removeChild(Psecond);
+Psecond.remove();
+
+// Using the style property
+FirstDiv.style.backgroundColor = "skyblue";
+FirstDiv.style.width = "40%";
+FirstDiv.style.padding = "10px 8px";
+FirstDiv.style.fontSize = "20px";
+FirstDiv.style.color = "white";
+FirstDiv.style.textAlign = "center";
+
+P4.style.backgroundColor = "yellow";
