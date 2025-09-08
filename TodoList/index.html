@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="flex">
+    <form
+      action=""
+      class="w-1/2 bg-blue-500 h-[100vh] flex items-center justify-center flex-col gap-3">
+      <input
+        type="text"
+        class="bg-white px-2 py-4 rounded-md w-[70%]"
+        placeholder="Enter your todo " />
+      <button
+        type="submit"
+        class="bg-slate-900 text-white py-2 px-3 rounded-sm">
+        Submit
+      </button>
+    </form>
+    <section class="h-[100vh] w-1/2 bg-orange-600">
+      <h1 class="text-3xl text-center my-5 font-semibold">TODOLIST</h1>
+      <div id="container"></div>
+    </section>
+    <script src="todo.js"></script>
+  </body>
+</html>
