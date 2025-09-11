@@ -1,0 +1,4 @@
+@import "tailwindcss";
+button {
+  @apply px-24 py-16 rounded-2xl bg-white cursor-pointer;
+}
