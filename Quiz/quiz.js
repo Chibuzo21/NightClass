@@ -21,3 +21,40 @@ const Questions = [
   },
 ];
 const displayQuestion = document.querySelector("#displayQuestion");
+let Score = document.querySelector("#score");
+const Button = document.querySelectorAll("button");
+// querySelectorAll returns the element as an array
+const Main = document.querySelector("main");
+
+let currentQuestion = 0;
+Score.textContent = 0;
+
+function Display() {
+  // This shows the questions and their options
+  displayQuestion.textContent = Questions[currentQuestion].question;
+  Questions[currentQuestion].options.forEach((option, index) => {
+    Button[index].textContent = option;
+  });
+}
+Display();
+function CheckforAnswer(value, eachButton) {
+  if (value === Questions[currentQuestion].correct) {
+    eachButton.style.backgroundColor = "green";
+    Score.textContent++;
+  } else {
+    eachButton.style.backgroundColor = "red";
+  }
+  setTimeout(() => {
+    // Handle nexting of questions
+    currentQuestion++;
+
+    // condition to ensure questions displayed do not exceed our list
+    if (currentQuestion < Questions.length) {
+      Display();
+      eachButton.style.backgroundColor = "";
+    } else {
+      Main.textContent = `GAME OVER, your score is ${Score.textContent}`;
+      Main.classList.add("lastpage");
+    }
+  }, 2000);
+}

@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body>
-    <script src="quiz.js"></script>
     <main class="bg-slate-800 w-full min-h-screen">
       <section
-        class="border-white border-8 flex justify-between rounded-sm w-full p-24">
+        class="border-white border-8 flex justify-between rounded-sm w-full p-24 text-white text-xl">
         <div id="displayQuestion"></div>
         <div id="score"></div>
       </section>
       <section class="grid md:grid-cols-2 grid-col-1 gap-10 p-10">
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
+        <button onclick="CheckforAnswer(0,this)"></button>
+        <!-- This is the shorter way of writing  Button.addEventListener('click',CheckforAnswer) -->
+        <button onclick="CheckforAnswer(1,this)"></button>
+        <button onclick="CheckforAnswer(2,this)"></button>
+        <button onclick="CheckforAnswer(3,this)"></button>
       </section>
     </main>
+    <script src="quiz.js"></script>
   </body>
 </html>
