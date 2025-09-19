@@ -27,6 +27,7 @@ const Button = document.querySelectorAll("button");
 const Main = document.querySelector("main");
 
 let currentQuestion = 0;
+// currentQuestion is a variable that keeps track of the present question we are in
 Score.textContent = 0;
 
 function Display() {
@@ -38,6 +39,7 @@ function Display() {
 }
 Display();
 function CheckforAnswer(value, eachButton) {
+  // CheckforAnswer function helps to check the correct and wrong answers
   if (value === Questions[currentQuestion].correct) {
     eachButton.style.backgroundColor = "green";
     Score.textContent++;
@@ -53,6 +55,7 @@ function CheckforAnswer(value, eachButton) {
       Display();
       eachButton.style.backgroundColor = "";
     } else {
+      // when weve reached the end of our questions the main element is changed to display GAMEOVER
       Main.textContent = `GAME OVER, your score is ${Score.textContent}`;
       Main.classList.add("lastpage");
     }
