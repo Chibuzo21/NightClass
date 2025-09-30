@@ -1,10 +1,9 @@
-import React from "react";
-import Condition from "./condition";
+import Lists from "./Lists";
 
 export default function App() {
   return (
     <div>
-      <Condition />
+      <Lists />
     </div>
   );
 }
